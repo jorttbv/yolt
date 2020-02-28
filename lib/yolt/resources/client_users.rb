@@ -4,9 +4,13 @@ require 'rest-client'
 
 module Yolt
   module Resources
-    class ClientUsers < Base
+    class ClientUsers
+      def initialize(client)
+        @resource = ProtectedResource.new(client, 'client-users/client-users')
+      end
+
       def create(country_code:)
-        post('client-users/client-users', countryCode: country_code)
+        @resource.post(countryCode: country_code)
       end
     end
   end

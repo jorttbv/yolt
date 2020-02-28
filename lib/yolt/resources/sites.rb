@@ -2,10 +2,13 @@
 
 module Yolt
   module Resources
-    class Sites < Base
+    class Sites
+      def initialize(client)
+        @resource = ProtectedResource.new(client, 'site-management/v2/sites')
+      end
+
       def index(redirect_url_id: nil)
-        get(
-          'site-management/v2/sites',
+        @resource.get(
           {}.tap do |params|
             params[:redirectUrlId] = redirect_url_id if redirect_url_id
           end,

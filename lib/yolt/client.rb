@@ -2,7 +2,10 @@
 
 require 'yolt/request_token'
 
-require 'yolt/resources/base'
+require 'yolt/resources/resource'
+require 'yolt/resources/public_resource'
+require 'yolt/resources/protected_resource'
+
 require 'yolt/resources/access_tokens'
 require 'yolt/resources/client_users'
 require 'yolt/resources/sites'
