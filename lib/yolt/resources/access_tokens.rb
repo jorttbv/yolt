@@ -5,10 +5,10 @@ require 'json'
 
 module Yolt
   module Resources
-    class Tokens < Base
-      def create(request_token)
+    class AccessTokens < Base
+      def create(grant_type: 'client_credentials', request_token:)
         rest_resource['tokens/tokens'].post(
-          grant_type: 'client_credentials',
+          grant_type: grant_type,
           request_token: request_token,
         ) do |response, _request, _result|
           case response.code

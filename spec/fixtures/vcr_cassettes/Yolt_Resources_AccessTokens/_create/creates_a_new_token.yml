@@ -25,7 +25,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Fri, 28 Feb 2020 13:44:45 GMT
+      - Fri, 28 Feb 2020 14:00:38 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
@@ -52,5 +52,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"access_token":"CENSORED_ACCESS_TOKEN","token_type":"Bearer","expires_in":600,"scope":""}'
     http_version: null
-  recorded_at: Fri, 28 Feb 2020 13:44:45 GMT
+  recorded_at: Fri, 28 Feb 2020 14:00:38 GMT
 recorded_with: VCR 5.1.0

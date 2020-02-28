@@ -3,7 +3,7 @@
 require 'yolt/request_token'
 
 require 'yolt/resources/base'
-require 'yolt/resources/tokens'
+require 'yolt/resources/access_tokens'
 module Yolt
   class Client
     attr_reader :configuration
@@ -12,8 +12,8 @@ module Yolt
       @configuration = configuration
     end
 
-    def tokens
-      Resources::Tokens.new(self)
+    def access_tokens
+      Resources::AccessTokens.new(self)
     end
   end
 end
