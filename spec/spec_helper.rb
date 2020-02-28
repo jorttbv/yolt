@@ -18,6 +18,15 @@ VCR.configure do |c|
     payload = JSON.parse(interaction.response.body)
     payload['access_token']
   end
+
+  ACCESS_TOKEN_REGEX = /Bearer (.*)/.freeze
+  c.filter_sensitive_data('CENSORED_ACCESS_TOKEN') do |interaction|
+    authorization_header = interaction.request.headers['Authorization']
+    next if authorization_header.nil?
+
+    match = ACCESS_TOKEN_REGEX.match(authorization_header.first)
+    match[1] if match
+  end
 end
 
 RSpec.configure do |config|
