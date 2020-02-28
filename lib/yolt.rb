@@ -9,7 +9,7 @@ module Yolt
     attr_accessor :configuration
 
     def reset_configuration
-      @configuration = Configuration.new
+      @configuration = Configuration.default
     end
 
     def configure(&_block)
