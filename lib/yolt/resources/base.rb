@@ -32,6 +32,19 @@ module Yolt
           end
         end
       end
+
+      def get(path, params = {})
+        rest_resource[path].get(
+          content_type: 'application/json',
+          authorization: "Bearer #{client.access_token}",
+          params: params,
+        ) do |response, _request, _result|
+          case response.code
+          when 200, 201
+            JSON.parse(response.body)
+          end
+        end
+      end
     end
   end
 end
