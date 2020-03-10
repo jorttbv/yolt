@@ -9,7 +9,7 @@ module Yolt
 
       def index(redirect_url_id: nil)
         @resource.get(
-          {}.tap do |params|
+          params: {}.tap do |params|
             params[:redirectUrlId] = redirect_url_id if redirect_url_id
           end,
         )

@@ -11,11 +11,11 @@ module Yolt
         )
       end
 
-      def get(params = {})
+      def get(params: {}, headers: {})
         @resource.get(
-          default_headers.merge(
-            params: params,
-          ),
+          default_headers
+            .merge(headers)
+            .merge(params: params),
           &method(:handle_response)
         )
       end

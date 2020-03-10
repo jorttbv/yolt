@@ -15,8 +15,11 @@ VCR.configure do |c|
   end
 
   c.filter_sensitive_data('CENSORED_ACCESS_TOKEN') do |interaction|
-    payload = JSON.parse(interaction.response.body)
-    payload['access_token'] if payload.is_a?(Hash)
+    content_type_header = interaction.response.headers['Content-Type']
+    if content_type_header && content_type_header[0].include?('application/json')
+      payload = JSON.parse(interaction.response.body)
+      payload['access_token'] if payload.is_a?(Hash)
+    end
   end
 
   ACCESS_TOKEN_REGEX = /Bearer (.*)/.freeze

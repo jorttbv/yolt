@@ -9,6 +9,7 @@ require 'yolt/resources/protected_resource'
 require 'yolt/resources/access_tokens'
 require 'yolt/resources/client_users'
 require 'yolt/resources/sites'
+require 'yolt/resources/site'
 
 module Yolt
   class Client
@@ -28,6 +29,10 @@ module Yolt
 
     def sites
       Resources::Sites.new(self)
+    end
+
+    def site(id)
+      Resources::Site.new(self, id)
     end
 
     def access_token
