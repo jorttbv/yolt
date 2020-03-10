@@ -3,10 +3,11 @@
 module Yolt
   module Resources
     class ProtectedResource < Resource
-      def post(payload)
+      def post(payload, headers: {})
         @resource.post(
           JSON.dump(payload),
-          default_headers,
+          default_headers
+            .merge(headers),
           &method(:handle_response)
         )
       end

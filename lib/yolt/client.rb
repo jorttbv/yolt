@@ -12,6 +12,8 @@ require 'yolt/resources/access_tokens'
 require 'yolt/resources/client_users'
 require 'yolt/resources/sites'
 require 'yolt/resources/site'
+require 'yolt/resources/user_sites'
+require 'yolt/resources/user_site'
 
 module Yolt
   class Client
@@ -35,6 +37,14 @@ module Yolt
 
     def site(id)
       Resources::Site.new(self, id)
+    end
+
+    def user_sites
+      Resources::UserSites.new(self)
+    end
+
+    def user_site(id)
+      Resources::UserSite.new(self, id)
     end
 
     def access_token
