@@ -2,6 +2,8 @@
 
 require 'yolt/request_token'
 
+require 'yolt/error'
+
 require 'yolt/resources/resource'
 require 'yolt/resources/public_resource'
 require 'yolt/resources/protected_resource'

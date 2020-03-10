@@ -25,6 +25,8 @@ module Yolt
           return JSON.parse(response.body) if response.headers[:content_type].include?(JSON_CONTENT_TYPE)
 
           response.body
+        else
+          fail Error.from_response(response)
         end
       end
     end
