@@ -1,8 +1,9 @@
 # Yolt
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/yolt`. To experiment with that code, run `bin/console` for an interactive prompt.
+A Ruby client for the Yolt API.
 
-TODO: Delete this and the text above, and describe your gem
+Documentation for the Yolt API can be found here: https://developer.yolt.com/docs
+The reference docs can be found here: https://developer.yolt.com/reference
 
 ## Installation
 
@@ -22,7 +23,23 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To configure the Yolt client, you will need details provided here: https://developer.yolt.com/management/
+
+```ruby
+Yolt.configure do |config|
+  config.client_id = 'YOUR_CLIENT_ID'
+  config.request_token_public_key_id = 'YOUR_REQUEST_TOKEN_PUBLIC_KEY_ID'
+  config.tls_certificate = IO.read('tls-certificate.pem')
+  config.tls_private_key = IO.read('tls-private-key.pem')
+  config.private_key_path = 'private-key.pem'
+end
+```
+
+After configuration, you can perform requests like so:
+
+```ruby
+Yolt.client.client_users.create(country_code: 'NL')
+```
 
 ## Development
 
@@ -32,8 +49,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/yolt.
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/jorttbv/yolt.
 
 ## License
 
