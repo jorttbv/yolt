@@ -15,6 +15,7 @@ require 'yolt/resources/site'
 require 'yolt/resources/user_sites'
 require 'yolt/resources/user_site'
 require 'yolt/resources/health'
+require 'yolt/resources/accounts'
 
 module Yolt
   class Client
@@ -50,6 +51,10 @@ module Yolt
 
     def health
       Resources::Health.new(self)
+    end
+
+    def accounts
+      Resources::Accounts.new(self)
     end
 
     def access_token
