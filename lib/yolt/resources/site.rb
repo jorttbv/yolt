@@ -4,7 +4,7 @@ module Yolt
   module Resources
     class Site
       def initialize(client, id)
-        @sites_resource = ProtectedResource.new(client, "/site-management/v2/sites/#{id}")
+        @site_resource = ProtectedResource.new(client, "/site-management/v2/sites/#{id}")
         @initiation_resource = ProtectedResource.new(client, "/site-management/sites/#{id}/initiate-user-site")
       end
 
@@ -20,7 +20,7 @@ module Yolt
       end
 
       def show
-        @sites_resource.get
+        @site_resource.get
       end
     end
   end
