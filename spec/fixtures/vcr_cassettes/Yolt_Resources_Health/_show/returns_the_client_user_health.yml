@@ -1,0 +1,112 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.sandbox.yolt.io/tokens/tokens
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials&request_token=CENSORED_REQUEST_TOKEN
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (darwin19.0.0 x86_64) ruby/2.6.3p62
+      Content-Length:
+      - '992'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.sandbox.yolt.io
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Tue, 10 Mar 2020 15:15:02 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      X-Frame-Options:
+      - DENY
+      Vary:
+      - accept-encoding
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"CENSORED_ACCESS_TOKEN","token_type":"Bearer","expires_in":600,"scope":""}'
+    http_version: null
+  recorded_at: Tue, 10 Mar 2020 15:15:02 GMT
+- request:
+    method: get
+    uri: https://api.sandbox.yolt.io//health/user-health/me
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (darwin19.0.0 x86_64) ruby/2.6.3p62
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer CENSORED_ACCESS_TOKEN
+      Client-User-Id:
+      - 612c0f4a-5912-411e-8c33-23067ff8f096
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.sandbox.yolt.io
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Tue, 10 Mar 2020 15:15:02 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      X-Frame-Options:
+      - DENY
+      Vary:
+      - accept-encoding
+    body:
+      encoding: UTF-8
+      string: '{"health":"UP_TO_DATE","processingStatusDetail":null,"accountGroups":[{"type":"FOREIGN_CURRENCY","accounts":[{"id":"13d4e396-2871-44d3-9400-5e743c73c405","lastRefreshed":"2020-03-10T15:13:53+0000","updated":"2020-03-10T15:13:53+0000","status":"DATASCIENCE_FINISHED","userSiteId":"61e57f53-8f71-43c6-afb3-702c2a5451e6","health":"UP_TO_DATE","freshness":"UP_TO_DATE"},{"id":"6976411d-026e-42b0-b8a9-cb40c1944606","lastRefreshed":"2020-03-10T15:13:53+0000","updated":"2020-03-10T15:13:53+0000","status":"DATASCIENCE_FINISHED","userSiteId":"61e57f53-8f71-43c6-afb3-702c2a5451e6","health":"UP_TO_DATE","freshness":"UP_TO_DATE"},{"id":"bb37c8b9-c421-43ec-bd14-4714a2c4dec5","lastRefreshed":"2020-03-10T15:13:53+0000","updated":"2020-03-10T15:13:53+0000","status":"DATASCIENCE_FINISHED","userSiteId":"61e57f53-8f71-43c6-afb3-702c2a5451e6","health":"UP_TO_DATE","freshness":"UP_TO_DATE"}],"health":"UP_TO_DATE","freshness":"UP_TO_DATE"}],"userSites":[{"id":"61e57f53-8f71-43c6-afb3-702c2a5451e6","name":"Yolt
+        test Open banking","status":"REFRESH_FINISHED","reason":null,"statusTimeoutSeconds":null,"action":null,"health":"UP_TO_DATE","accounts":[{"id":"13d4e396-2871-44d3-9400-5e743c73c405","lastRefreshed":"2020-03-10T15:13:53+0000","updated":"2020-03-10T15:13:53+0000","status":"DATASCIENCE_FINISHED","userSiteId":"61e57f53-8f71-43c6-afb3-702c2a5451e6","health":"UP_TO_DATE","freshness":"UP_TO_DATE"},{"id":"6976411d-026e-42b0-b8a9-cb40c1944606","lastRefreshed":"2020-03-10T15:13:53+0000","updated":"2020-03-10T15:13:53+0000","status":"DATASCIENCE_FINISHED","userSiteId":"61e57f53-8f71-43c6-afb3-702c2a5451e6","health":"UP_TO_DATE","freshness":"UP_TO_DATE"},{"id":"bb37c8b9-c421-43ec-bd14-4714a2c4dec5","lastRefreshed":"2020-03-10T15:13:53+0000","updated":"2020-03-10T15:13:53+0000","status":"DATASCIENCE_FINISHED","userSiteId":"61e57f53-8f71-43c6-afb3-702c2a5451e6","health":"UP_TO_DATE","freshness":"UP_TO_DATE"}],"freshness":"UP_TO_DATE","migrationStatus":"NONE","noLongerSupported":false}],"freshness":"UP_TO_DATE","migrationStatus":"NONE"}'
+    http_version: null
+  recorded_at: Tue, 10 Mar 2020 15:15:02 GMT
+recorded_with: VCR 5.1.0
