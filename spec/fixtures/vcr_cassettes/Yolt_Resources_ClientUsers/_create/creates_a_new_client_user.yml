@@ -25,9 +25,9 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Fri, 28 Feb 2020 14:23:21 GMT
+      - Tue, 10 Mar 2020 15:11:32 GMT
       Content-Type:
-      - application/json;charset=UTF-8
+      - application/json
       Transfer-Encoding:
       - chunked
       Connection:
@@ -52,7 +52,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"access_token":"CENSORED_ACCESS_TOKEN","token_type":"Bearer","expires_in":600,"scope":""}'
     http_version: null
-  recorded_at: Fri, 28 Feb 2020 14:23:21 GMT
+  recorded_at: Tue, 10 Mar 2020 15:11:32 GMT
 - request:
     method: post
     uri: https://api.sandbox.yolt.io/client-users/client-users
@@ -80,7 +80,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Fri, 28 Feb 2020 14:23:21 GMT
+      - Tue, 10 Mar 2020 15:11:32 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
@@ -106,7 +106,7 @@ http_interactions:
       - max-age=15724800; includeSubDomains
     body:
       encoding: UTF-8
-      string: '{"id":"94913058-99a1-402d-b5c9-1840ed7a982b","clientId":"db63d6fb-426c-4153-85cd-b7491b3f0a91","countryCode":"NL","created":"2020-02-28T14:23:21.949+0000"}'
+      string: '{"id":"612c0f4a-5912-411e-8c33-23067ff8f096","clientId":"db63d6fb-426c-4153-85cd-b7491b3f0a91","countryCode":"NL","created":"2020-03-10T15:11:32.461+0000"}'
     http_version: null
-  recorded_at: Fri, 28 Feb 2020 14:23:21 GMT
+  recorded_at: Tue, 10 Mar 2020 15:11:32 GMT
 recorded_with: VCR 5.1.0

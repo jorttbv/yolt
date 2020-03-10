@@ -25,7 +25,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Tue, 10 Mar 2020 14:28:26 GMT
+      - Tue, 10 Mar 2020 15:17:02 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -52,10 +52,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"access_token":"CENSORED_ACCESS_TOKEN","token_type":"Bearer","expires_in":600,"scope":""}'
     http_version: null
-  recorded_at: Tue, 10 Mar 2020 14:28:26 GMT
+  recorded_at: Tue, 10 Mar 2020 15:17:02 GMT
 - request:
     method: get
-    uri: https://api.sandbox.yolt.io/site-management/user-sites/b48622c7-4a98-48b3-a57e-8aa85fe84f9d
+    uri: https://api.sandbox.yolt.io/site-management/user-sites/61e57f53-8f71-43c6-afb3-702c2a5451e6
     body:
       encoding: US-ASCII
       string: ''
@@ -69,7 +69,7 @@ http_interactions:
       Authorization:
       - Bearer CENSORED_ACCESS_TOKEN
       Client-User-Id:
-      - 94913058-99a1-402d-b5c9-1840ed7a982b
+      - 612c0f4a-5912-411e-8c33-23067ff8f096
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Host:
@@ -80,7 +80,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Tue, 10 Mar 2020 14:28:26 GMT
+      - Tue, 10 Mar 2020 15:17:02 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -105,7 +105,7 @@ http_interactions:
       - accept-encoding
     body:
       encoding: UTF-8
-      string: '{"id":"b48622c7-4a98-48b3-a57e-8aa85fe84f9d","siteId":"ca8a362a-a351-4358-9f1c-a8b4b91ed65b","status":"LOGIN_FAILED","reason":"NEW_LOGIN_INFO_NEEDED","statusTimeoutSeconds":null,"action":"UPDATE_CREDENTIALS","site":null,"migrationStatus":"NONE","lastDataFetch":null,"externalConsentExpiresAt":"2020-06-08T14:18:33.265Z","noLongerSupported":false,"_links":{"site":{"href":"/site-management/sites/ca8a362a-a351-4358-9f1c-a8b4b91ed65b"},"refresh":{"href":"/site-management/user-sites/b48622c7-4a98-48b3-a57e-8aa85fe84f9d/refresh"},"delete":{"href":"/site-management/user-sites/b48622c7-4a98-48b3-a57e-8aa85fe84f9d"},"updateCredentials":{"href":"/site-management/user-sites/b48622c7-4a98-48b3-a57e-8aa85fe84f9d"},"mfaForm":{"href":"/site-management/user-sites/b48622c7-4a98-48b3-a57e-8aa85fe84f9d/mfa"},"migrationGroup":{"href":""},"renewConsent":{"href":"/site-management/user-sites/b48622c7-4a98-48b3-a57e-8aa85fe84f9d/renew-access"},"renewAccess":{"href":"/site-management/user-sites/b48622c7-4a98-48b3-a57e-8aa85fe84f9d/renew-access"},"getNextStep":{"href":"/site-management/user-sites/b48622c7-4a98-48b3-a57e-8aa85fe84f9d/step"}}}'
+      string: '{"id":"61e57f53-8f71-43c6-afb3-702c2a5451e6","siteId":"ca8a362a-a351-4358-9f1c-a8b4b91ed65b","status":"REFRESH_FINISHED","reason":null,"statusTimeoutSeconds":null,"action":null,"site":null,"migrationStatus":"NONE","lastDataFetch":"2020-03-10T15:13:53+0000","externalConsentExpiresAt":"2020-06-08T15:13:52.060Z","noLongerSupported":false,"_links":{"site":{"href":"/site-management/sites/ca8a362a-a351-4358-9f1c-a8b4b91ed65b"},"refresh":{"href":"/site-management/user-sites/61e57f53-8f71-43c6-afb3-702c2a5451e6/refresh"},"delete":{"href":"/site-management/user-sites/61e57f53-8f71-43c6-afb3-702c2a5451e6"},"updateCredentials":{"href":"/site-management/user-sites/61e57f53-8f71-43c6-afb3-702c2a5451e6"},"mfaForm":{"href":"/site-management/user-sites/61e57f53-8f71-43c6-afb3-702c2a5451e6/mfa"},"migrationGroup":{"href":""},"renewConsent":{"href":"/site-management/user-sites/61e57f53-8f71-43c6-afb3-702c2a5451e6/renew-access"},"renewAccess":{"href":"/site-management/user-sites/61e57f53-8f71-43c6-afb3-702c2a5451e6/renew-access"},"getNextStep":{"href":"/site-management/user-sites/61e57f53-8f71-43c6-afb3-702c2a5451e6/step"}}}'
     http_version: null
-  recorded_at: Tue, 10 Mar 2020 14:28:26 GMT
+  recorded_at: Tue, 10 Mar 2020 15:17:02 GMT
 recorded_with: VCR 5.1.0

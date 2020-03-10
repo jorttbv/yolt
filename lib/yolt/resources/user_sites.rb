@@ -23,7 +23,7 @@ module Yolt
           {
             loginType: login_type,
           }.tap do |payload|
-            payload['redirectUrl'] = redirect_url if login_type == LOGIN_TYPE_URL
+            payload[:redirectUrl] = redirect_url if login_type == LOGIN_TYPE_URL
           end,
           headers: {
             'client-user-id' => client_user_id,

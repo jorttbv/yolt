@@ -32,6 +32,9 @@ VCR.configure do |c|
   end
 end
 
+TEST_CLIENT_USER_ID = '612c0f4a-5912-411e-8c33-23067ff8f096'
+TEST_USER_SITE_ID = '61e57f53-8f71-43c6-afb3-702c2a5451e6'
+
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
