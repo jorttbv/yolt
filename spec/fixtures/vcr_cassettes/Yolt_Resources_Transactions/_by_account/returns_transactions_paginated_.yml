@@ -1,0 +1,188 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.sandbox.yolt.io/tokens/tokens
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials&request_token=CENSORED_REQUEST_TOKEN
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (darwin19.0.0 x86_64) ruby/2.6.3p62
+      Content-Length:
+      - '992'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.sandbox.yolt.io
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Wed, 11 Mar 2020 19:55:58 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      X-Frame-Options:
+      - DENY
+      Vary:
+      - accept-encoding
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"CENSORED_ACCESS_TOKEN","token_type":"Bearer","expires_in":600,"scope":""}'
+    http_version: null
+  recorded_at: Wed, 11 Mar 2020 19:55:58 GMT
+- request:
+    method: get
+    uri: https://api.sandbox.yolt.io/transactions/transactions-by-account/me?accountId=13d4e396-2871-44d3-9400-5e743c73c405
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (darwin19.0.0 x86_64) ruby/2.6.3p62
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer CENSORED_ACCESS_TOKEN
+      Client-User-Id:
+      - 612c0f4a-5912-411e-8c33-23067ff8f096
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.sandbox.yolt.io
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Wed, 11 Mar 2020 19:55:58 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      X-Frame-Options:
+      - DENY
+      Vary:
+      - accept-encoding
+    body:
+      encoding: UTF-8
+      string: '{"transactions":[{"accountId":"13d4e396-2871-44d3-9400-5e743c73c405","id":"6121a1ab-f913-34e4-9159-87825054c377","transactionType":"PENDING","date":"2020-03-01","amount":-324.93,"currency":"GBP","category":"General","description":"TESCO
+        STORE 1234 YV 5678","shortDescription":"TESCO STORE 1234 YV 5678","merchantObject":null,"note":"","cycleId":null,"_links":{"_self":{"href":"/transactions/transactions/me/13d4e396-2871-44d3-9400-5e743c73c405/2020-03-01/PENDING/6121a1ab-f913-34e4-9159-87825054c377"},"similarTransactionsForRecategorization":{"href":"/transactions/bulk-recategorization/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=6121a1ab-f913-34e4-9159-87825054c377"},"similarTransactionsBasedOnMerchant":{"href":"/transactions/merchant-adjustments/me/accounts/13d4e396-2871-44d3-9400-5e743c73c405/transactions/6121a1ab-f913-34e4-9159-87825054c377/similar-transactions"},"similarTransactionsForBulkTagging":{"href":"/transactions/bulk-tagging/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=6121a1ab-f913-34e4-9159-87825054c377"},"similarTransactionsForBulkTaggingSetTags":{"href":"/transactions/bulk-tagging/me/set-tags"},"paymentCycle":null}},{"accountId":"13d4e396-2871-44d3-9400-5e743c73c405","id":"a758b921-b4c1-332f-9473-8b64889c7a2b","transactionType":"PENDING","date":"2020-02-23","amount":-335.60,"currency":"GBP","category":"General","description":"TESCO
+        STORE 1234 YV 5678","shortDescription":"TESCO STORE 1234 YV 5678","merchantObject":null,"note":"","cycleId":null,"_links":{"_self":{"href":"/transactions/transactions/me/13d4e396-2871-44d3-9400-5e743c73c405/2020-02-23/PENDING/a758b921-b4c1-332f-9473-8b64889c7a2b"},"similarTransactionsForRecategorization":{"href":"/transactions/bulk-recategorization/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=a758b921-b4c1-332f-9473-8b64889c7a2b"},"similarTransactionsBasedOnMerchant":{"href":"/transactions/merchant-adjustments/me/accounts/13d4e396-2871-44d3-9400-5e743c73c405/transactions/a758b921-b4c1-332f-9473-8b64889c7a2b/similar-transactions"},"similarTransactionsForBulkTagging":{"href":"/transactions/bulk-tagging/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=a758b921-b4c1-332f-9473-8b64889c7a2b"},"similarTransactionsForBulkTaggingSetTags":{"href":"/transactions/bulk-tagging/me/set-tags"},"paymentCycle":null}},{"accountId":"13d4e396-2871-44d3-9400-5e743c73c405","id":"fcd3d8c0-a8dc-3af7-b1da-c5d913315d09","transactionType":"PENDING","date":"2020-02-16","amount":-125.73,"currency":"GBP","category":"General","description":"TESCO
+        STORE 1234 YV 5678","shortDescription":"TESCO STORE 1234 YV 5678","merchantObject":null,"note":"","cycleId":null,"_links":{"_self":{"href":"/transactions/transactions/me/13d4e396-2871-44d3-9400-5e743c73c405/2020-02-16/PENDING/fcd3d8c0-a8dc-3af7-b1da-c5d913315d09"},"similarTransactionsForRecategorization":{"href":"/transactions/bulk-recategorization/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=fcd3d8c0-a8dc-3af7-b1da-c5d913315d09"},"similarTransactionsBasedOnMerchant":{"href":"/transactions/merchant-adjustments/me/accounts/13d4e396-2871-44d3-9400-5e743c73c405/transactions/fcd3d8c0-a8dc-3af7-b1da-c5d913315d09/similar-transactions"},"similarTransactionsForBulkTagging":{"href":"/transactions/bulk-tagging/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=fcd3d8c0-a8dc-3af7-b1da-c5d913315d09"},"similarTransactionsForBulkTaggingSetTags":{"href":"/transactions/bulk-tagging/me/set-tags"},"paymentCycle":null}},{"accountId":"13d4e396-2871-44d3-9400-5e743c73c405","id":"f2e713ec-6e0a-3329-a1de-afc1a93a9619","transactionType":"PENDING","date":"2020-02-02","amount":-79.03,"currency":"GBP","category":"General","description":"OYSTER
+        AUTOTOPUP VY 6833","shortDescription":"OYSTER AUTOTOPUP VY 6833","merchantObject":null,"note":"","cycleId":null,"_links":{"_self":{"href":"/transactions/transactions/me/13d4e396-2871-44d3-9400-5e743c73c405/2020-02-02/PENDING/f2e713ec-6e0a-3329-a1de-afc1a93a9619"},"similarTransactionsForRecategorization":{"href":"/transactions/bulk-recategorization/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=f2e713ec-6e0a-3329-a1de-afc1a93a9619"},"similarTransactionsBasedOnMerchant":{"href":"/transactions/merchant-adjustments/me/accounts/13d4e396-2871-44d3-9400-5e743c73c405/transactions/f2e713ec-6e0a-3329-a1de-afc1a93a9619/similar-transactions"},"similarTransactionsForBulkTagging":{"href":"/transactions/bulk-tagging/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=f2e713ec-6e0a-3329-a1de-afc1a93a9619"},"similarTransactionsForBulkTaggingSetTags":{"href":"/transactions/bulk-tagging/me/set-tags"},"paymentCycle":null}},{"accountId":"13d4e396-2871-44d3-9400-5e743c73c405","id":"7ce46a81-4ed4-3f99-b824-ec0a6cc72d35","transactionType":"REGULAR","date":"2020-03-01","amount":-182.75,"currency":"GBP","category":"General","description":"OYSTER
+        AUTOTOPUP VY 6833","shortDescription":"OYSTER AUTOTOPUP VY 6833","merchantObject":null,"note":"","cycleId":null,"_links":{"_self":{"href":"/transactions/transactions/me/13d4e396-2871-44d3-9400-5e743c73c405/2020-03-01/REGULAR/7ce46a81-4ed4-3f99-b824-ec0a6cc72d35"},"similarTransactionsForRecategorization":{"href":"/transactions/bulk-recategorization/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=7ce46a81-4ed4-3f99-b824-ec0a6cc72d35"},"similarTransactionsBasedOnMerchant":{"href":"/transactions/merchant-adjustments/me/accounts/13d4e396-2871-44d3-9400-5e743c73c405/transactions/7ce46a81-4ed4-3f99-b824-ec0a6cc72d35/similar-transactions"},"similarTransactionsForBulkTagging":{"href":"/transactions/bulk-tagging/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=7ce46a81-4ed4-3f99-b824-ec0a6cc72d35"},"similarTransactionsForBulkTaggingSetTags":{"href":"/transactions/bulk-tagging/me/set-tags"},"paymentCycle":null}},{"accountId":"13d4e396-2871-44d3-9400-5e743c73c405","id":"f4adb0e6-7237-3155-9a05-ab23edede81b","transactionType":"REGULAR","date":"2020-02-23","amount":-8.26,"currency":"GBP","category":"General","description":"OYSTER
+        AUTOTOPUP VY 6833","shortDescription":"OYSTER AUTOTOPUP VY 6833","merchantObject":null,"note":"","cycleId":null,"_links":{"_self":{"href":"/transactions/transactions/me/13d4e396-2871-44d3-9400-5e743c73c405/2020-02-23/REGULAR/f4adb0e6-7237-3155-9a05-ab23edede81b"},"similarTransactionsForRecategorization":{"href":"/transactions/bulk-recategorization/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=f4adb0e6-7237-3155-9a05-ab23edede81b"},"similarTransactionsBasedOnMerchant":{"href":"/transactions/merchant-adjustments/me/accounts/13d4e396-2871-44d3-9400-5e743c73c405/transactions/f4adb0e6-7237-3155-9a05-ab23edede81b/similar-transactions"},"similarTransactionsForBulkTagging":{"href":"/transactions/bulk-tagging/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=f4adb0e6-7237-3155-9a05-ab23edede81b"},"similarTransactionsForBulkTaggingSetTags":{"href":"/transactions/bulk-tagging/me/set-tags"},"paymentCycle":null}},{"accountId":"13d4e396-2871-44d3-9400-5e743c73c405","id":"6a9f8f47-07de-308c-9148-8c31c070a70a","transactionType":"REGULAR","date":"2020-02-16","amount":-31.76,"currency":"GBP","category":"General","description":"OYSTER
+        AUTOTOPUP VY 6833","shortDescription":"OYSTER AUTOTOPUP VY 6833","merchantObject":null,"note":"","cycleId":null,"_links":{"_self":{"href":"/transactions/transactions/me/13d4e396-2871-44d3-9400-5e743c73c405/2020-02-16/REGULAR/6a9f8f47-07de-308c-9148-8c31c070a70a"},"similarTransactionsForRecategorization":{"href":"/transactions/bulk-recategorization/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=6a9f8f47-07de-308c-9148-8c31c070a70a"},"similarTransactionsBasedOnMerchant":{"href":"/transactions/merchant-adjustments/me/accounts/13d4e396-2871-44d3-9400-5e743c73c405/transactions/6a9f8f47-07de-308c-9148-8c31c070a70a/similar-transactions"},"similarTransactionsForBulkTagging":{"href":"/transactions/bulk-tagging/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=6a9f8f47-07de-308c-9148-8c31c070a70a"},"similarTransactionsForBulkTaggingSetTags":{"href":"/transactions/bulk-tagging/me/set-tags"},"paymentCycle":null}},{"accountId":"13d4e396-2871-44d3-9400-5e743c73c405","id":"91e9b181-b34e-32d2-8d82-600a1a2aa1e7","transactionType":"REGULAR","date":"2020-02-09","amount":-127.58,"currency":"GBP","category":"General","description":"TESCO
+        STORE 1234 YV 5678","shortDescription":"TESCO STORE 1234 YV 5678","merchantObject":null,"note":"","cycleId":null,"_links":{"_self":{"href":"/transactions/transactions/me/13d4e396-2871-44d3-9400-5e743c73c405/2020-02-09/REGULAR/91e9b181-b34e-32d2-8d82-600a1a2aa1e7"},"similarTransactionsForRecategorization":{"href":"/transactions/bulk-recategorization/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=91e9b181-b34e-32d2-8d82-600a1a2aa1e7"},"similarTransactionsBasedOnMerchant":{"href":"/transactions/merchant-adjustments/me/accounts/13d4e396-2871-44d3-9400-5e743c73c405/transactions/91e9b181-b34e-32d2-8d82-600a1a2aa1e7/similar-transactions"},"similarTransactionsForBulkTagging":{"href":"/transactions/bulk-tagging/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=91e9b181-b34e-32d2-8d82-600a1a2aa1e7"},"similarTransactionsForBulkTaggingSetTags":{"href":"/transactions/bulk-tagging/me/set-tags"},"paymentCycle":null}},{"accountId":"13d4e396-2871-44d3-9400-5e743c73c405","id":"0c66482d-98fd-332f-88a7-63febc99606a","transactionType":"REGULAR","date":"2020-02-09","amount":-362.42,"currency":"GBP","category":"General","description":"OYSTER
+        AUTOTOPUP VY 6833","shortDescription":"OYSTER AUTOTOPUP VY 6833","merchantObject":null,"note":"","cycleId":null,"_links":{"_self":{"href":"/transactions/transactions/me/13d4e396-2871-44d3-9400-5e743c73c405/2020-02-09/REGULAR/0c66482d-98fd-332f-88a7-63febc99606a"},"similarTransactionsForRecategorization":{"href":"/transactions/bulk-recategorization/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=0c66482d-98fd-332f-88a7-63febc99606a"},"similarTransactionsBasedOnMerchant":{"href":"/transactions/merchant-adjustments/me/accounts/13d4e396-2871-44d3-9400-5e743c73c405/transactions/0c66482d-98fd-332f-88a7-63febc99606a/similar-transactions"},"similarTransactionsForBulkTagging":{"href":"/transactions/bulk-tagging/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=0c66482d-98fd-332f-88a7-63febc99606a"},"similarTransactionsForBulkTaggingSetTags":{"href":"/transactions/bulk-tagging/me/set-tags"},"paymentCycle":null}},{"accountId":"13d4e396-2871-44d3-9400-5e743c73c405","id":"46538a4d-741d-3799-93bc-de74e9082939","transactionType":"REGULAR","date":"2020-02-02","amount":-90.86,"currency":"GBP","category":"General","description":"TESCO
+        STORE 1234 YV 5678","shortDescription":"TESCO STORE 1234 YV 5678","merchantObject":null,"note":"","cycleId":null,"_links":{"_self":{"href":"/transactions/transactions/me/13d4e396-2871-44d3-9400-5e743c73c405/2020-02-02/REGULAR/46538a4d-741d-3799-93bc-de74e9082939"},"similarTransactionsForRecategorization":{"href":"/transactions/bulk-recategorization/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=46538a4d-741d-3799-93bc-de74e9082939"},"similarTransactionsBasedOnMerchant":{"href":"/transactions/merchant-adjustments/me/accounts/13d4e396-2871-44d3-9400-5e743c73c405/transactions/46538a4d-741d-3799-93bc-de74e9082939/similar-transactions"},"similarTransactionsForBulkTagging":{"href":"/transactions/bulk-tagging/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=46538a4d-741d-3799-93bc-de74e9082939"},"similarTransactionsForBulkTaggingSetTags":{"href":"/transactions/bulk-tagging/me/set-tags"},"paymentCycle":null}},{"accountId":"13d4e396-2871-44d3-9400-5e743c73c405","id":"adf9eb5a-7011-3d4c-85c8-a58ca171ab8e","transactionType":"REGULAR","date":"2020-01-26","amount":-352.11,"currency":"GBP","category":"General","description":"TESCO
+        STORE 1234 YV 5678","shortDescription":"TESCO STORE 1234 YV 5678","merchantObject":null,"note":"","cycleId":null,"_links":{"_self":{"href":"/transactions/transactions/me/13d4e396-2871-44d3-9400-5e743c73c405/2020-01-26/REGULAR/adf9eb5a-7011-3d4c-85c8-a58ca171ab8e"},"similarTransactionsForRecategorization":{"href":"/transactions/bulk-recategorization/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=adf9eb5a-7011-3d4c-85c8-a58ca171ab8e"},"similarTransactionsBasedOnMerchant":{"href":"/transactions/merchant-adjustments/me/accounts/13d4e396-2871-44d3-9400-5e743c73c405/transactions/adf9eb5a-7011-3d4c-85c8-a58ca171ab8e/similar-transactions"},"similarTransactionsForBulkTagging":{"href":"/transactions/bulk-tagging/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=adf9eb5a-7011-3d4c-85c8-a58ca171ab8e"},"similarTransactionsForBulkTaggingSetTags":{"href":"/transactions/bulk-tagging/me/set-tags"},"paymentCycle":null}},{"accountId":"13d4e396-2871-44d3-9400-5e743c73c405","id":"41286d81-88f6-3139-bbb4-7c463b56e5fe","transactionType":"REGULAR","date":"2020-01-12","amount":-123.54,"currency":"GBP","category":"General","description":"OYSTER
+        AUTOTOPUP VY 6833","shortDescription":"OYSTER AUTOTOPUP VY 6833","merchantObject":null,"note":"","cycleId":null,"_links":{"_self":{"href":"/transactions/transactions/me/13d4e396-2871-44d3-9400-5e743c73c405/2020-01-12/REGULAR/41286d81-88f6-3139-bbb4-7c463b56e5fe"},"similarTransactionsForRecategorization":{"href":"/transactions/bulk-recategorization/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=41286d81-88f6-3139-bbb4-7c463b56e5fe"},"similarTransactionsBasedOnMerchant":{"href":"/transactions/merchant-adjustments/me/accounts/13d4e396-2871-44d3-9400-5e743c73c405/transactions/41286d81-88f6-3139-bbb4-7c463b56e5fe/similar-transactions"},"similarTransactionsForBulkTagging":{"href":"/transactions/bulk-tagging/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=41286d81-88f6-3139-bbb4-7c463b56e5fe"},"similarTransactionsForBulkTaggingSetTags":{"href":"/transactions/bulk-tagging/me/set-tags"},"paymentCycle":null}},{"accountId":"13d4e396-2871-44d3-9400-5e743c73c405","id":"a114c0bc-26a0-3409-b881-803d52f86dc5","transactionType":"REGULAR","date":"2020-01-05","amount":-219.04,"currency":"GBP","category":"General","description":"OYSTER
+        AUTOTOPUP VY 6833","shortDescription":"OYSTER AUTOTOPUP VY 6833","merchantObject":null,"note":"","cycleId":null,"_links":{"_self":{"href":"/transactions/transactions/me/13d4e396-2871-44d3-9400-5e743c73c405/2020-01-05/REGULAR/a114c0bc-26a0-3409-b881-803d52f86dc5"},"similarTransactionsForRecategorization":{"href":"/transactions/bulk-recategorization/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=a114c0bc-26a0-3409-b881-803d52f86dc5"},"similarTransactionsBasedOnMerchant":{"href":"/transactions/merchant-adjustments/me/accounts/13d4e396-2871-44d3-9400-5e743c73c405/transactions/a114c0bc-26a0-3409-b881-803d52f86dc5/similar-transactions"},"similarTransactionsForBulkTagging":{"href":"/transactions/bulk-tagging/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=a114c0bc-26a0-3409-b881-803d52f86dc5"},"similarTransactionsForBulkTaggingSetTags":{"href":"/transactions/bulk-tagging/me/set-tags"},"paymentCycle":null}},{"accountId":"13d4e396-2871-44d3-9400-5e743c73c405","id":"39cab62f-01fe-3aa8-978a-ad2245a5495a","transactionType":"REGULAR","date":"2020-01-05","amount":-346.46,"currency":"GBP","category":"General","description":"TESCO
+        STORE 1234 YV 5678","shortDescription":"TESCO STORE 1234 YV 5678","merchantObject":null,"note":"","cycleId":null,"_links":{"_self":{"href":"/transactions/transactions/me/13d4e396-2871-44d3-9400-5e743c73c405/2020-01-05/REGULAR/39cab62f-01fe-3aa8-978a-ad2245a5495a"},"similarTransactionsForRecategorization":{"href":"/transactions/bulk-recategorization/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=39cab62f-01fe-3aa8-978a-ad2245a5495a"},"similarTransactionsBasedOnMerchant":{"href":"/transactions/merchant-adjustments/me/accounts/13d4e396-2871-44d3-9400-5e743c73c405/transactions/39cab62f-01fe-3aa8-978a-ad2245a5495a/similar-transactions"},"similarTransactionsForBulkTagging":{"href":"/transactions/bulk-tagging/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=39cab62f-01fe-3aa8-978a-ad2245a5495a"},"similarTransactionsForBulkTaggingSetTags":{"href":"/transactions/bulk-tagging/me/set-tags"},"paymentCycle":null}},{"accountId":"13d4e396-2871-44d3-9400-5e743c73c405","id":"82d7ef70-5e15-3e20-83ab-fc06968e86f6","transactionType":"REGULAR","date":"2019-12-22","amount":-207.17,"currency":"GBP","category":"General","description":"OYSTER
+        AUTOTOPUP VY 6833","shortDescription":"OYSTER AUTOTOPUP VY 6833","merchantObject":null,"note":"","cycleId":null,"_links":{"_self":{"href":"/transactions/transactions/me/13d4e396-2871-44d3-9400-5e743c73c405/2019-12-22/REGULAR/82d7ef70-5e15-3e20-83ab-fc06968e86f6"},"similarTransactionsForRecategorization":{"href":"/transactions/bulk-recategorization/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=82d7ef70-5e15-3e20-83ab-fc06968e86f6"},"similarTransactionsBasedOnMerchant":{"href":"/transactions/merchant-adjustments/me/accounts/13d4e396-2871-44d3-9400-5e743c73c405/transactions/82d7ef70-5e15-3e20-83ab-fc06968e86f6/similar-transactions"},"similarTransactionsForBulkTagging":{"href":"/transactions/bulk-tagging/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=82d7ef70-5e15-3e20-83ab-fc06968e86f6"},"similarTransactionsForBulkTaggingSetTags":{"href":"/transactions/bulk-tagging/me/set-tags"},"paymentCycle":null}},{"accountId":"13d4e396-2871-44d3-9400-5e743c73c405","id":"75ff5918-c0c9-3c91-92f7-c6bf3b779eac","transactionType":"REGULAR","date":"2019-12-15","amount":-50.82,"currency":"GBP","category":"General","description":"OYSTER
+        AUTOTOPUP VY 6833","shortDescription":"OYSTER AUTOTOPUP VY 6833","merchantObject":null,"note":"","cycleId":null,"_links":{"_self":{"href":"/transactions/transactions/me/13d4e396-2871-44d3-9400-5e743c73c405/2019-12-15/REGULAR/75ff5918-c0c9-3c91-92f7-c6bf3b779eac"},"similarTransactionsForRecategorization":{"href":"/transactions/bulk-recategorization/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=75ff5918-c0c9-3c91-92f7-c6bf3b779eac"},"similarTransactionsBasedOnMerchant":{"href":"/transactions/merchant-adjustments/me/accounts/13d4e396-2871-44d3-9400-5e743c73c405/transactions/75ff5918-c0c9-3c91-92f7-c6bf3b779eac/similar-transactions"},"similarTransactionsForBulkTagging":{"href":"/transactions/bulk-tagging/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=75ff5918-c0c9-3c91-92f7-c6bf3b779eac"},"similarTransactionsForBulkTaggingSetTags":{"href":"/transactions/bulk-tagging/me/set-tags"},"paymentCycle":null}},{"accountId":"13d4e396-2871-44d3-9400-5e743c73c405","id":"a02653dd-0ebb-392d-9276-75ce97e99861","transactionType":"REGULAR","date":"2019-12-10","amount":-313.63,"currency":"GBP","category":"General","description":"Direct
+        Debit - O2","shortDescription":"Direct Debit - O2","merchantObject":null,"note":"","cycleId":null,"_links":{"_self":{"href":"/transactions/transactions/me/13d4e396-2871-44d3-9400-5e743c73c405/2019-12-10/REGULAR/a02653dd-0ebb-392d-9276-75ce97e99861"},"similarTransactionsForRecategorization":{"href":"/transactions/bulk-recategorization/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=a02653dd-0ebb-392d-9276-75ce97e99861"},"similarTransactionsBasedOnMerchant":{"href":"/transactions/merchant-adjustments/me/accounts/13d4e396-2871-44d3-9400-5e743c73c405/transactions/a02653dd-0ebb-392d-9276-75ce97e99861/similar-transactions"},"similarTransactionsForBulkTagging":{"href":"/transactions/bulk-tagging/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=a02653dd-0ebb-392d-9276-75ce97e99861"},"similarTransactionsForBulkTaggingSetTags":{"href":"/transactions/bulk-tagging/me/set-tags"},"paymentCycle":null}},{"accountId":"13d4e396-2871-44d3-9400-5e743c73c405","id":"b0015900-dc6a-384b-a380-7171604564ab","transactionType":"REGULAR","date":"2019-12-01","amount":-324.87,"currency":"GBP","category":"General","description":"OYSTER
+        AUTOTOPUP VY 6833","shortDescription":"OYSTER AUTOTOPUP VY 6833","merchantObject":null,"note":"","cycleId":null,"_links":{"_self":{"href":"/transactions/transactions/me/13d4e396-2871-44d3-9400-5e743c73c405/2019-12-01/REGULAR/b0015900-dc6a-384b-a380-7171604564ab"},"similarTransactionsForRecategorization":{"href":"/transactions/bulk-recategorization/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=b0015900-dc6a-384b-a380-7171604564ab"},"similarTransactionsBasedOnMerchant":{"href":"/transactions/merchant-adjustments/me/accounts/13d4e396-2871-44d3-9400-5e743c73c405/transactions/b0015900-dc6a-384b-a380-7171604564ab/similar-transactions"},"similarTransactionsForBulkTagging":{"href":"/transactions/bulk-tagging/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=b0015900-dc6a-384b-a380-7171604564ab"},"similarTransactionsForBulkTaggingSetTags":{"href":"/transactions/bulk-tagging/me/set-tags"},"paymentCycle":null}},{"accountId":"13d4e396-2871-44d3-9400-5e743c73c405","id":"cf7add50-6aa4-3e91-80da-19f163c58455","transactionType":"REGULAR","date":"2019-11-24","amount":-155.65,"currency":"GBP","category":"General","description":"TESCO
+        STORE 1234 YV 5678","shortDescription":"TESCO STORE 1234 YV 5678","merchantObject":null,"note":"","cycleId":null,"_links":{"_self":{"href":"/transactions/transactions/me/13d4e396-2871-44d3-9400-5e743c73c405/2019-11-24/REGULAR/cf7add50-6aa4-3e91-80da-19f163c58455"},"similarTransactionsForRecategorization":{"href":"/transactions/bulk-recategorization/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=cf7add50-6aa4-3e91-80da-19f163c58455"},"similarTransactionsBasedOnMerchant":{"href":"/transactions/merchant-adjustments/me/accounts/13d4e396-2871-44d3-9400-5e743c73c405/transactions/cf7add50-6aa4-3e91-80da-19f163c58455/similar-transactions"},"similarTransactionsForBulkTagging":{"href":"/transactions/bulk-tagging/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=cf7add50-6aa4-3e91-80da-19f163c58455"},"similarTransactionsForBulkTaggingSetTags":{"href":"/transactions/bulk-tagging/me/set-tags"},"paymentCycle":null}},{"accountId":"13d4e396-2871-44d3-9400-5e743c73c405","id":"31a790cf-17eb-3cca-9cf4-ff9a4e4e9c03","transactionType":"REGULAR","date":"2019-11-24","amount":-142.02,"currency":"GBP","category":"General","description":"OYSTER
+        AUTOTOPUP VY 6833","shortDescription":"OYSTER AUTOTOPUP VY 6833","merchantObject":null,"note":"","cycleId":null,"_links":{"_self":{"href":"/transactions/transactions/me/13d4e396-2871-44d3-9400-5e743c73c405/2019-11-24/REGULAR/31a790cf-17eb-3cca-9cf4-ff9a4e4e9c03"},"similarTransactionsForRecategorization":{"href":"/transactions/bulk-recategorization/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=31a790cf-17eb-3cca-9cf4-ff9a4e4e9c03"},"similarTransactionsBasedOnMerchant":{"href":"/transactions/merchant-adjustments/me/accounts/13d4e396-2871-44d3-9400-5e743c73c405/transactions/31a790cf-17eb-3cca-9cf4-ff9a4e4e9c03/similar-transactions"},"similarTransactionsForBulkTagging":{"href":"/transactions/bulk-tagging/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=31a790cf-17eb-3cca-9cf4-ff9a4e4e9c03"},"similarTransactionsForBulkTaggingSetTags":{"href":"/transactions/bulk-tagging/me/set-tags"},"paymentCycle":null}}],"_links":{"account":{"href":"/user-accounts/me"},"next":{"href":"/transactions/transactions-by-account/me?accountId=13d4e396-2871-44d3-9400-5e743c73c405&next=00570010004b001013d4e396287144d394005e743c73c40504000000010a323031392d31312d32342433316137393063662d313765622d336363612d396366342d66663961346534653963303303474250f07fffffebf07fffffeb3d2dc5b7ae748b67121b2ec72d6c68c00004&extended=false"},"update":{"href":"/transactions/transactions/me"},"similarTransactions":{"href":"/transactions/bulk-recategorization/me/search-similar"},"similarTransactionsForBulkTagging":{"href":"/transactions/bulk-tagging/me/search-similar/multiple?seedTransactions={seedTransactions}&newTags={newTags}"}}}'
+    http_version: null
+  recorded_at: Wed, 11 Mar 2020 19:55:58 GMT
+- request:
+    method: get
+    uri: https://api.sandbox.yolt.io/transactions/transactions-by-account/me?accountId=13d4e396-2871-44d3-9400-5e743c73c405&next=00570010004b001013d4e396287144d394005e743c73c40504000000010a323031392d31312d32342433316137393063662d313765622d336363612d396366342d66663961346534653963303303474250f07fffffebf07fffffeb3d2dc5b7ae748b67121b2ec72d6c68c00004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (darwin19.0.0 x86_64) ruby/2.6.3p62
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer CENSORED_ACCESS_TOKEN
+      Client-User-Id:
+      - 612c0f4a-5912-411e-8c33-23067ff8f096
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.sandbox.yolt.io
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Wed, 11 Mar 2020 19:55:59 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      X-Frame-Options:
+      - DENY
+      Vary:
+      - accept-encoding
+    body:
+      encoding: UTF-8
+      string: '{"transactions":[{"accountId":"13d4e396-2871-44d3-9400-5e743c73c405","id":"1f1cd7be-4943-3816-8a63-f55bbf89723c","transactionType":"REGULAR","date":"2019-11-17","amount":-394.72,"currency":"GBP","category":"General","description":"OYSTER
+        AUTOTOPUP VY 6833","shortDescription":"OYSTER AUTOTOPUP VY 6833","merchantObject":null,"note":"","cycleId":null,"_links":{"_self":{"href":"/transactions/transactions/me/13d4e396-2871-44d3-9400-5e743c73c405/2019-11-17/REGULAR/1f1cd7be-4943-3816-8a63-f55bbf89723c"},"similarTransactionsForRecategorization":{"href":"/transactions/bulk-recategorization/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=1f1cd7be-4943-3816-8a63-f55bbf89723c"},"similarTransactionsBasedOnMerchant":{"href":"/transactions/merchant-adjustments/me/accounts/13d4e396-2871-44d3-9400-5e743c73c405/transactions/1f1cd7be-4943-3816-8a63-f55bbf89723c/similar-transactions"},"similarTransactionsForBulkTagging":{"href":"/transactions/bulk-tagging/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=1f1cd7be-4943-3816-8a63-f55bbf89723c"},"similarTransactionsForBulkTaggingSetTags":{"href":"/transactions/bulk-tagging/me/set-tags"},"paymentCycle":null}},{"accountId":"13d4e396-2871-44d3-9400-5e743c73c405","id":"522e2c8c-d920-3b8d-a9ec-1ea2ee586803","transactionType":"REGULAR","date":"2019-11-10","amount":-3.71,"currency":"GBP","category":"General","description":"OYSTER
+        AUTOTOPUP VY 6833","shortDescription":"OYSTER AUTOTOPUP VY 6833","merchantObject":null,"note":"","cycleId":null,"_links":{"_self":{"href":"/transactions/transactions/me/13d4e396-2871-44d3-9400-5e743c73c405/2019-11-10/REGULAR/522e2c8c-d920-3b8d-a9ec-1ea2ee586803"},"similarTransactionsForRecategorization":{"href":"/transactions/bulk-recategorization/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=522e2c8c-d920-3b8d-a9ec-1ea2ee586803"},"similarTransactionsBasedOnMerchant":{"href":"/transactions/merchant-adjustments/me/accounts/13d4e396-2871-44d3-9400-5e743c73c405/transactions/522e2c8c-d920-3b8d-a9ec-1ea2ee586803/similar-transactions"},"similarTransactionsForBulkTagging":{"href":"/transactions/bulk-tagging/me/search-similar?accountId=13d4e396-2871-44d3-9400-5e743c73c405&transactionId=522e2c8c-d920-3b8d-a9ec-1ea2ee586803"},"similarTransactionsForBulkTaggingSetTags":{"href":"/transactions/bulk-tagging/me/set-tags"},"paymentCycle":null}}],"_links":{"account":{"href":"/user-accounts/me"},"next":null,"update":{"href":"/transactions/transactions/me"},"similarTransactions":{"href":"/transactions/bulk-recategorization/me/search-similar"},"similarTransactionsForBulkTagging":{"href":"/transactions/bulk-tagging/me/search-similar/multiple?seedTransactions={seedTransactions}&newTags={newTags}"}}}'
+    http_version: null
+  recorded_at: Wed, 11 Mar 2020 19:55:59 GMT
+recorded_with: VCR 5.1.0

@@ -10,6 +10,7 @@ require 'yolt/response_handler'
 require 'yolt/resource'
 require 'yolt/public_resource'
 require 'yolt/protected_resource'
+require 'yolt/paginator'
 
 require 'yolt/resources/access_tokens'
 require 'yolt/resources/client_users'
