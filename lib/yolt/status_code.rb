@@ -3,6 +3,7 @@
 module Yolt
   class StatusCode
     # sucessful
+    SUCCESSFUL = (200..299).freeze
     OK = 200
     CREATED = 201
     ACCEPTED = 202
