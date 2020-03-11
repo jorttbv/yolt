@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 module Yolt
+  # See https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
   class StatusCode
     # sucessful
     SUCCESSFUL_RANGE = (200..299).freeze
