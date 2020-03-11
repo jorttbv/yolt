@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
 describe Yolt::ProtectedResource, :configured do
-  let(:resource) { Yolt::ProtectedResource.new(client, '/resource') }
-  let(:client) { Yolt.client }
+  let(:resource) { Yolt::ProtectedResource.new(Yolt.configuration, '/resource') }
 
   describe '#perform_request' do
     context 'given a block that raises no error' do

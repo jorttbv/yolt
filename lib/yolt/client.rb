@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'yolt/thread_safe_access_token_cache'
 require 'yolt/request_token'
 require 'yolt/status_code'
 require 'yolt/content_type'
@@ -29,61 +30,39 @@ module Yolt
     end
 
     def access_tokens
-      Resources::AccessTokens.new(self)
+      Resources::AccessTokens.new(@configuration)
     end
 
     def client_users
-      Resources::ClientUsers.new(self)
+      Resources::ClientUsers.new(@configuration)
     end
 
     def sites
-      Resources::Sites.new(self)
+      Resources::Sites.new(@configuration)
     end
 
     def site(id)
-      Resources::Site.new(self, id)
+      Resources::Site.new(@configuration, id)
     end
 
     def user_sites
-      Resources::UserSites.new(self)
+      Resources::UserSites.new(@configuration)
     end
 
     def user_site(id)
-      Resources::UserSite.new(self, id)
+      Resources::UserSite.new(@configuration, id)
     end
 
     def health
-      Resources::Health.new(self)
+      Resources::Health.new(@configuration)
     end
 
     def accounts
-      Resources::Accounts.new(self)
+      Resources::Accounts.new(@configuration)
     end
 
     def transactions
-      Resources::Transactions.new(self)
-    end
-
-    def access_token
-      @access_token ||= create_access_token
-    end
-
-    def reset_access_token!
-      @access_token = nil
-    end
-
-    private
-
-    def create_access_token
-      access_tokens.create(request_token: request_token)['access_token']
-    end
-
-    def request_token
-      RequestToken.create(
-        configuration.client_id,
-        configuration.request_token_public_key_id,
-        configuration.private_key_path,
-      )
+      Resources::Transactions.new(@configuration)
     end
   end
 end

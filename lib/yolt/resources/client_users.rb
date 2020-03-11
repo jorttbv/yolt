@@ -3,8 +3,8 @@
 module Yolt
   module Resources
     class ClientUsers
-      def initialize(client)
-        @resource = ProtectedResource.new(client, 'client-users/client-users')
+      def initialize(configuration)
+        @resource = ProtectedResource.new(configuration, 'client-users/client-users')
       end
 
       def create(country_code:)

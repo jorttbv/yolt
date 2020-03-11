@@ -5,8 +5,8 @@ require 'json'
 module Yolt
   module Resources
     class AccessTokens
-      def initialize(client)
-        @resource = PublicResource.new(client, 'tokens/tokens')
+      def initialize(configuration)
+        @resource = PublicResource.new(configuration, 'tokens/tokens')
       end
 
       def create(grant_type: 'client_credentials', request_token:)

@@ -4,9 +4,9 @@ module Yolt
   class ProtectedResource
     include Resource
 
-    def initialize(client, path)
-      @client = client
-      @rest_resource = create_rest_resource(client.configuration, path)
+    def initialize(configuration, path)
+      @configuration = configuration
+      @rest_resource = create_rest_resource(configuration, path)
     end
 
     def post(payload, headers: {})
@@ -39,7 +39,7 @@ module Yolt
       raise if @attempt == 3
 
       @attempt += 1
-      @client.reset_access_token!
+      @configuration.access_token_cache.clear!
       retry
     end
 
@@ -53,7 +53,29 @@ module Yolt
     end
 
     def authorization_header
-      "Bearer #{@client.access_token}"
+      "Bearer #{access_token}"
+    end
+
+    def access_token
+      @configuration.access_token_cache.get do
+        create_access_token
+      end
+    end
+
+    def create_access_token
+      access_tokens.create(request_token: request_token)['access_token']
+    end
+
+    def access_tokens
+      Resources::AccessTokens.new(@configuration)
+    end
+
+    def request_token
+      RequestToken.create(
+        @configuration.client_id,
+        @configuration.request_token_public_key_id,
+        @configuration.private_key_path,
+      )
     end
   end
 end

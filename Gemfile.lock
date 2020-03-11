@@ -3,6 +3,7 @@ PATH
   specs:
     yolt (0.1.0)
       rest-client (~> 2.1.0)
+      thread_safe (~> 0.3.6)
 
 GEM
   remote: https://rubygems.org/
@@ -64,6 +65,7 @@ GEM
       unicode-display_width (>= 1.4.0, < 1.7)
     ruby-progressbar (1.10.1)
     safe_yaml (1.0.5)
+    thread_safe (0.3.6)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.6)

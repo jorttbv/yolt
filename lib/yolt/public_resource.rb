@@ -4,8 +4,8 @@ module Yolt
   class PublicResource
     include Resource
 
-    def initialize(client, path)
-      @rest_resource = create_rest_resource(client.configuration, path)
+    def initialize(configuration, path)
+      @rest_resource = create_rest_resource(configuration, path)
     end
 
     def post(payload)
