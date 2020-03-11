@@ -10,7 +10,7 @@ module Yolt
     end
 
     def post(payload, headers: {})
-      perform_request do
+      retry_upon_access_token_expiry do
         @rest_resource.post(
           JSON.dump(payload),
           default_headers
@@ -21,7 +21,7 @@ module Yolt
     end
 
     def get(params: {}, headers: {})
-      perform_request do
+      retry_upon_access_token_expiry do
         @rest_resource.get(
           default_headers
             .merge(headers)
@@ -31,7 +31,7 @@ module Yolt
       end
     end
 
-    def perform_request
+    def retry_upon_access_token_expiry
       @attempt ||= 1
       yield
     rescue Error::Unauthorized => e
