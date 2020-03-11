@@ -5,6 +5,7 @@ require 'yolt/request_token'
 require 'yolt/status_code'
 require 'yolt/content_type'
 require 'yolt/error'
+require 'yolt/error_code'
 
 require 'yolt/resources/resource'
 require 'yolt/resources/public_resource'
@@ -66,6 +67,10 @@ module Yolt
 
     def access_token
       @access_token ||= create_access_token
+    end
+
+    def reset_access_token!
+      @access_token = nil
     end
 
     private

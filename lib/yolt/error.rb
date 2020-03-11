@@ -2,7 +2,7 @@
 
 module Yolt
   class Error < StandardError
-    attr_reader :status_code, :code
+    attr_reader :status_code, :error_code
 
     # client errors
     ClientError = Class.new(self)
@@ -64,11 +64,11 @@ module Yolt
       end
     end
 
-    def initialize(message, status_code, code = nil)
+    def initialize(message, status_code, error_code = nil)
       super(message)
 
       @status_code = status_code
-      @code = code
+      @error_code = error_code
     end
   end
 end
