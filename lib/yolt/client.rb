@@ -1,15 +1,14 @@
 # frozen_string_literal: true
 
 require 'yolt/request_token'
-
 require 'yolt/status_code'
 require 'yolt/content_type'
 require 'yolt/error'
 require 'yolt/error_code'
-
-require 'yolt/resources/resource'
-require 'yolt/resources/public_resource'
-require 'yolt/resources/protected_resource'
+require 'yolt/response_handler'
+require 'yolt/resource'
+require 'yolt/public_resource'
+require 'yolt/protected_resource'
 
 require 'yolt/resources/access_tokens'
 require 'yolt/resources/client_users'

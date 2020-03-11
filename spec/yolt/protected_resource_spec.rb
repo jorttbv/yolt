@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-describe Yolt::Resources::ProtectedResource, :configured do
-  let(:resource) { Yolt::Resources::ProtectedResource.new(client, '/resource') }
+describe Yolt::ProtectedResource, :configured do
+  let(:resource) { Yolt::ProtectedResource.new(client, '/resource') }
   let(:client) { Yolt.client }
 
   describe '#perform_request' do
