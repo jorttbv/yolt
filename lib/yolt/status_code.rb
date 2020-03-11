@@ -3,14 +3,14 @@
 module Yolt
   class StatusCode
     # sucessful
-    SUCCESSFUL = (200..299).freeze
+    SUCCESSFUL_RANGE = (200..299).freeze
     OK = 200
     CREATED = 201
     ACCEPTED = 202
     NO_CONTENT = 204
 
     # client error
-    CLIENT_ERROR = (400..499).freeze
+    CLIENT_ERROR_RANGE = (400..499).freeze
     BAD_REQUEST = 400
     UNAUTHORIZED = 401
     FORBIDDEN = 403
@@ -21,7 +21,7 @@ module Yolt
     GONE = 410
 
     # server error
-    SERVER_ERROR = (500..599).freeze
+    SERVER_ERROR_RANGE = (500..599).freeze
     INTERNAL_SERVER_ERROR = 500
     SERVICE_UNAVAILABLE = 503
   end

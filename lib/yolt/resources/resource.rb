@@ -19,7 +19,7 @@ module Yolt
 
       def handle_response(response, _request, _result)
         case response.code
-        when StatusCode::SUCCESSFUL
+        when StatusCode::SUCCESSFUL_RANGE
           return JSON.parse(response.body) if response.headers[:content_type].include?(ContentType::JSON)
 
           response.body
