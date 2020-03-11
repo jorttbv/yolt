@@ -3,8 +3,6 @@
 module Yolt
   module Resources
     class Resource
-      JSON_CONTENT_TYPE = 'application/json'
-
       def initialize(client, path)
         @client = client
         @path = path
@@ -22,7 +20,7 @@ module Yolt
       def handle_response(response, _request, _result)
         case response.code
         when 200, 201
-          return JSON.parse(response.body) if response.headers[:content_type].include?(JSON_CONTENT_TYPE)
+          return JSON.parse(response.body) if response.headers[:content_type].include?(ContentType::JSON)
 
           response.body
         else

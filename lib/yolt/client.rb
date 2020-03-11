@@ -3,6 +3,7 @@
 require 'yolt/request_token'
 
 require 'yolt/error'
+require 'yolt/content_type'
 
 require 'yolt/resources/resource'
 require 'yolt/resources/public_resource'

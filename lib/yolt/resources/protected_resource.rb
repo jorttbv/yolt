@@ -25,7 +25,7 @@ module Yolt
 
       def default_headers
         {
-          content_type: JSON_CONTENT_TYPE,
+          content_type: ContentType::JSON,
           authorization: authorization_header,
         }
       end
