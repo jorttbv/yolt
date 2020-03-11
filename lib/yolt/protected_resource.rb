@@ -6,7 +6,7 @@ module Yolt
 
     def initialize(client, path)
       @client = client
-      @rest_resource = create_rest_resource(client, path)
+      @rest_resource = create_rest_resource(client.configuration, path)
     end
 
     def post(payload, headers: {})

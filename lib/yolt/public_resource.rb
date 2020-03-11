@@ -5,7 +5,7 @@ module Yolt
     include Resource
 
     def initialize(client, path)
-      @rest_resource = create_rest_resource(client, path)
+      @rest_resource = create_rest_resource(client.configuration, path)
     end
 
     def post(payload)
